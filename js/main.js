@@ -189,12 +189,14 @@ myCartIcon.addEventListener('click', function () {
 function viewAddedItemsMenu() {
   if (myCart.length > 0) {
     let addedProducts = myCart
-      .map((el) => {
+      .map((el) =>
+      {
         return `
         <div>
         <p>${el.product_name}</p>
         <p>${el.product_price}</p>
       </div>
+
       <hr>
       `
       })
