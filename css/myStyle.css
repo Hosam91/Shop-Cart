@@ -1,9 +1,12 @@
 
     @media (max-width: 767px) {
+      body {
+        overflow-x: hidden !important;
+    }
       
         .content{
-            width: 100%;
-        }
+          max-width: 100% !important;
+          overflow-x: hidden !important;        }
        .content .cards {
         width: 100%;
         
@@ -35,6 +38,18 @@
       }
     }
     @media (max-width:450px) {
+      .content{
+        max-width: 100% !important;
+        overflow-x: hidden !important;        }
+    .content .cards {
+      width: 100%;
+      
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+  
+      }
         .cards .card{
                 display: flex;
                 flex-wrap: wrap;

@@ -105,7 +105,7 @@ function addToCart(id) {
   for (let i = 0; i <= products.length; i++) {
     localStorage.setItem('myProducts', JSON.stringify(products))
   }
-
+  viewAddedItemsMenu() 
   displayProuducts()
 
   if (lightbox.style.display == 'flex') {
@@ -124,6 +124,7 @@ function removeFromCart(id) {
   }
 
   displayProuducts()
+  viewAddedItemsMenu() 
   if (lightbox.style.display == 'flex') {
     showItem(id)
   }
@@ -183,18 +184,19 @@ function closeItems() {
 
 myCartIcon.addEventListener('click', function () {
   addedItemsMenu.style.display = 'block'
+
   viewAddedItemsMenu()
 })
 
 function viewAddedItemsMenu() {
   if (myCart.length > 0) {
     let addedProducts = myCart
-      .map((el) =>
-      {
+      .map((el) => {
         return `
+           
         <div>
-        <p>${el.product_name}</p>
-        <p>${el.product_price}</p>
+          <p>${el.product_name}</p>
+          <p>${el.product_price}</p>
       </div>
 
       <hr>
@@ -204,12 +206,13 @@ function viewAddedItemsMenu() {
 
     addedItemsMenu.innerHTML = addedProducts
   } else {
-    addedItemsMenu.innerHTML = `
+    addedItemsMenu.innerHTML =   `
         <div>
         <p>Ther is no items added here !!</p>
         
       </div>`
   }
+
 }
 
 // ****************************

@@ -6,6 +6,7 @@
 body {
   /* font-size: 1rem; */
   font-weight: bold;
+  overflow-x: hidden !important;
 }
 
 /* navbar  */
@@ -41,20 +42,24 @@ ul li {
 ul li .addedItems {
   display: none;
   width: 13rem;
-  padding: 0.4rem;
+  padding: 0.5rem;
   background-color: #b3aaaa;
   position: absolute;
-  transform: translate(-11%, 7%);
+  transform: translate(-54%, 5%);
   border: 1px solid #0e0d0d;
   color: #0e0d0d;
+}
+.outer {
+  position: relative;
 }
 ul li .addedItems div {
   display: flex;
   justify-content: space-between;
-  padding: .6rem;
+  padding: 0.8rem;
 }
 #mycart {
   cursor: pointer;
+  color: #0e0d0d;
 }
 .notify {
   width: 1rem;
@@ -65,9 +70,8 @@ ul li .addedItems div {
   background-color: rgb(71, 69, 69);
   position: absolute;
   z-index: 999;
-left: 20;  
-top: -5;
-  
+  left: 20;
+  top: -5;
 }
 
 /* end navbar */
