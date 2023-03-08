@@ -216,3 +216,12 @@ function viewAddedItemsMenu() {
 }
 
 // ****************************
+// to close cart menu 
+let page = document.querySelector('.content')
+page.addEventListener('click', function ()
+{
+  displayProuducts()
+  addedItemsMenu.style.display = 'none'
+
+
+})
